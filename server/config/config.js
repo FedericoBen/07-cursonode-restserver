@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === 'dev') {
     urlDB = 'mongodb://localhost:27017/cafe';
 } else {
     //cuando este en produccion se va a conectar con la base de datos en mongoatlas
-    urlDB = 'mongodb+srv://federicobg95:WXZP7i9F6vP86Aeu@cluster0.sh5hr.mongodb.net/cafe';
+    urlDB = process.env.MONGO_URI;
 }
 
 process.env.URLDB = urlDB;
